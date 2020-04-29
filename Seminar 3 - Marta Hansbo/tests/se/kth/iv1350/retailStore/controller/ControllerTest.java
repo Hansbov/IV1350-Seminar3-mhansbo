@@ -85,21 +85,24 @@ class ControllerTest {
         controller.startNewSale();
         try { controller.registerGoods(1, 1); }
         catch (Exception ignored) {}
+        Amount amountPayed = new Amount(100.);
+        Amount total = controller.showWhatToPay();
+        String stringPayed = amountPayed.getStringAmount();
+        String expectedChange = new Amount(amountPayed.plus(total.times(-1).roundedToCoins()).getStringAmount()).getStringAmount();
+        String someChange = controller.finalizeSale(amountPayed).getStringAmount();
 
-        String someChange = controller.finalizeSale(new Amount(100.)).getStringAmount();
-        String someAmount = new Amount(100.).getStringAmount();
-        String otherAmount = new Amount(30.).getStringAmount();
-      assertNotEquals(someChange, someAmount,"Amount change is equal to amount paid");
-      assertEquals(someChange, otherAmount, "Amount change is not 30");
+      assertNotEquals(someChange, stringPayed,"Amount change is equal to amount paid");
+      assertEquals(someChange, expectedChange, "Amount change is wrong");
 
       controller.startNewSale();
       try { controller.registerGoods(1, 1); }
       catch (Exception ignored) {}
 
-      String someOtherChange = controller.finalizeSale(new Amount(60.)).getStringAmount();
-      String moreAmount = new Amount(-10.).getStringAmount();
+      Amount otherPayment = new Amount(60.);
+      String otherChange = controller.finalizeSale(otherPayment).getStringAmount();
+      String otherExpectedChange = new Amount(otherPayment.plus(total.times(-1).roundedToCoins()).getStringAmount()).getStringAmount();
 
-      assertEquals(someOtherChange, moreAmount, "Amount change is not -10");
+      assertEquals(otherChange, otherExpectedChange, "Amount change is wrong");
 
     }
 }
