@@ -66,4 +66,9 @@ class SaleBuilderTest {
         assertEquals(testSale.getRunningTotalInclVAT().getStringAmount(), result.getRunningTotal().getStringAmount(),"wrong running total VAT returned");
         assertEquals(testDTO.getItemPriceInclVAT().getStringAmount(), result.getPrice().getStringAmount(),"wrong price returned");
     }
+
+    @Test
+    void updateSale() {
+    }
+    
 }
