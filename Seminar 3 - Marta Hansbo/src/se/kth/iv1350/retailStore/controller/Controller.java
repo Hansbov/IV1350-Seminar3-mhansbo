@@ -97,18 +97,35 @@ public class Controller {
         return integrator.getCashRegister().getCashBalance();
     }
 
+    /**
+     * gets currentSale
+     * @return SaleBuilder currentSale
+     */
     public SaleBuilder getCurrentSale(){
         return currentSale;
     }
 
+    /**
+     * returns currentDiscount
+     * @return Discount currentDiscount
+     */
     public Discount getCurrentDiscount(){
         return currentDiscount;
     }
+
+    /**
+     * returns finalSale
+     * @return SaleTerminator finalSale
+     */
 
     public SaleTerminator getFinalSale(){
         return finalSale;
     }
 
+    /**
+     * returns integrator
+     * @return IntegratorCreator integrator
+     */
     public IntegratorCreator getIntegrator(){
         return integrator;
     }

@@ -8,7 +8,9 @@ import java.io.*;
  * represent the connection with an external printer.
  */
 public class Printer {
-
+    /**
+     * creates instance of Printer
+     */
     public Printer() {
     }
 

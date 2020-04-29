@@ -43,10 +43,18 @@ public class Goods {
         return this.goodsDescription.getItemPriceInclVAT().times(this.numberOfItems);
     }
 
+    /**
+     *
+     * @return int numberOfItems
+     */
     public int getNumberOfItems() {
         return numberOfItems;
     }
 
+    /**
+     *
+     * @return GoodsDTO goodsDescription
+     */
     public GoodsDTO getGoodsDescription() {
         return goodsDescription;
     }

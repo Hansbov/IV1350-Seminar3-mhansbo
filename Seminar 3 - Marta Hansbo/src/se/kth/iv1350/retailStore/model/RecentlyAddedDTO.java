@@ -25,23 +25,42 @@ public class RecentlyAddedDTO {
         nofItemsAdded = numberOfItems;
     }
 
+    /**
+     *
+     * @return Amount runningTotal
+     */
     public Amount getRunningTotal() {
         return runningTotal;
     }
 
+    /**
+     *
+     * @return Amount price
+     */
     public Amount getPrice() {
         return price;
     }
 
+    /**
+     *
+     * @return int numberOfItemsAdded
+     */
     public int getNumberOfItemsAdded() {
         return nofItemsAdded;
     }
 
+    /**
+     *
+     * @return String itemDescription
+     */
     public String getItemDescription() {
         return itemDescription;
     }
 
-    @Override
+    /**
+     *
+     * @return String of object
+     */
     public String toString() {
 
         return "  | " + nofItemsAdded + "x'" + itemDescription +

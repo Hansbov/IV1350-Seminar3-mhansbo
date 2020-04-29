@@ -7,7 +7,7 @@ public class GoodsDTO {
     private final Amount price;
     private final Amount itemPriceInclVAT;
     private final int VATRate;
-    private final Amount VATamount;
+    private final Amount VATAmount;
     private final String itemDescription;
     private final int itemID;
     private final boolean existsInDatabase;
@@ -24,8 +24,8 @@ public class GoodsDTO {
         this.itemID = itemID;
         this.price = inventoryManager.getPrice(itemID);
         VATRate = inventoryManager.getVATRate(itemID);
-        VATamount = price.takePercent(VATRate);
-        itemPriceInclVAT = price.plus(VATamount);
+        VATAmount = price.takePercent(VATRate);
+        itemPriceInclVAT = price.plus(VATAmount);
         itemDescription = inventoryManager.getItemDescription(itemID);
 
     }
@@ -44,38 +44,71 @@ public class GoodsDTO {
         this.itemID = itemID;
         this.price = price;
         this.VATRate = VATRate;
-        VATamount = price.takePercent(VATRate);
-        itemPriceInclVAT = price.plus(VATamount);
+        VATAmount = price.takePercent(VATRate);
+        itemPriceInclVAT = price.plus(VATAmount);
         this.existsInDatabase = false;
     }
 
-
+    /**
+     *  returns itemDescription
+     * @return String itemDescription
+     */
     public String getItemDescription() {
         return itemDescription;
     }
 
+    /**
+     *returns price
+     * @return Amount price
+     */
     public Amount getPrice() {
         return price;
     }
 
+    /**
+     *returns price including VAT
+     * @return Amount itemPriceIncVAT
+     */
     public Amount getItemPriceInclVAT() {
         return itemPriceInclVAT;
     }
 
+    /**
+     *returns VAT-rate
+     * @return int VATRate
+     */
     public int getVATRate() {
         return VATRate;
     }
 
-    public Amount getVATAmount() {return VATamount;}
+    /**
+     * returns amount VAT
+     * @return Amount VATAmount
+     */
+    public Amount getVATAmount() {
+        return VATAmount;
+    }
 
+    /**
+     *returns existsInDatabase
+     * @return Boolean existsInDatabase
+     */
     public boolean isExistsInDatabase() {
         return existsInDatabase;
     }
 
+    /**
+     *returns Item ID
+     * @return int itemID
+     */
     public int getItemID() {
         return itemID;
     }
 
+    /**
+     *creates a String of object
+     * @return String of object
+     */
     public String toString (){
         return "|ItemID: " + itemID +" | Exists in database: " + existsInDatabase +" | Price:" + price.getStringAmount() + "kr | VAT-Rate: " +
                 VATRate*100 + "% | " + itemDescription +"|";

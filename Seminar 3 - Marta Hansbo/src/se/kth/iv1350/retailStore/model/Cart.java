@@ -57,6 +57,10 @@ public class Cart {
         return index;
     }
 
+    /**
+     *
+     * @return ArrayList listOfGoods
+     */
     public ArrayList<Goods> getListOfGoods() {
         return listOfGoods;
     }

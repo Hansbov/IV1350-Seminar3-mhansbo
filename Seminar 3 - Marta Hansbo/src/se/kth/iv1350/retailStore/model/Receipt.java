@@ -76,46 +76,91 @@ public class Receipt {
         return receiptStr.toString();
     }
 
+    /**
+     *
+     * @return String timeAndDate
+     */
     public String getTimeAndDate() {
         return timeAndDate;
     }
 
+    /**
+     *
+     * @return StoreDTO
+     */
     public StoreDTO getStoreDTO() {
         return storeDTO;
     }
 
+    /**
+     *
+     * @return Amount amountPaid
+     */
     public Amount getAmountPaid() {
         return amountPaid;
     }
 
+
+    /**
+     *
+     * @return Amount amountChange
+     */
     public Amount getAmountChange() {
         return amountChange;
     }
 
+    /**
+     *
+     * @return Amount finalTotal
+     */
     public Amount getFinalTotal() {
         return finalTotal;
     }
 
+    /**
+     *
+     * @return Amount finalTotalAfterDiscount
+     */
     public Amount getFinalTotalAfterDiscount() {
         return finalTotalAfterDiscount;
     }
 
+    /**
+     *
+     * @return Amount finalTotalVAT
+     */
     public Amount getFinalTotalVAT() {
         return finalTotalVAT;
     }
 
+    /**
+     *
+     * @return Amount finalDiscount
+     */
     public Amount getFinalDiscount() {
         return finalDiscount;
     }
 
+    /**
+     *
+     * @return Amount rounding
+     */
     public Amount getRounding() {
         return rounding;
     }
 
+    /**
+     *
+     * @return ArrayList finalGoods
+     */
     public ArrayList<Goods> getFinalGoods() {
         return finalGoods;
     }
 
+    /**
+     *
+     * @return Printer
+     */
     public Printer getPrinter() {
         return printer;
     }

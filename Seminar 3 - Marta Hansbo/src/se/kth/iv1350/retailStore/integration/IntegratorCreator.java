@@ -23,22 +23,42 @@ public class IntegratorCreator {
         this.cashRegister = new CashRegister(accountingManager.getCashRegInitAmount());
     }
 
+    /**
+     *
+     * @return InventoryManager
+     */
     public InventoryManager getInventoryManager () {
         return inventoryManager;
     }
 
+    /**
+     *
+     * @return AccountingManager
+     */
     public AccountingManager getAccountingManager(){
         return accountingManager;
     }
 
+    /**
+     *
+     * @return SalesLog
+     */
     public SalesLog getSalesLog(){
         return salesLog;
     }
 
+    /**
+     *
+     * @return Printer
+     */
     public Printer getPrinter(){
         return printer;
     }
 
+    /**
+     *
+     * @return CashRegister
+     */
     public CashRegister getCashRegister(){
         return cashRegister;
     }

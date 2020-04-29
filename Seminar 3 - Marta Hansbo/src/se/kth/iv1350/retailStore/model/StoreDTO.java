@@ -21,26 +21,50 @@ public class StoreDTO {
 
     }
 
+    /**
+     *
+     * @return String storeName
+     */
     public String getStoreName() {
         return storeName;
     }
 
+    /**
+     *
+     * @return String street
+     */
     public String getStreet() {
         return street;
     }
 
+    /**
+     *
+     * @return int streetNumber
+     */
     public int getStreetNumber() {
         return streetNumber;
     }
 
+    /**
+     *
+     * @return int zipCode
+     */
     public int getZipCode() {
         return zipCode;
     }
 
+    /**
+     *
+     * @return String city
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     *
+     * @return String of object
+     */
     public String toString() {
         return String.format("%n%s %n%s  %d %n%d  %s  %n", storeName, street, streetNumber, zipCode, city);
     }
