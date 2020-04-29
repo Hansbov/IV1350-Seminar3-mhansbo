@@ -54,7 +54,7 @@ class SaleTerminatorTest {
         assertEquals(expPaid,saleTerminator.getPayment().getAmountPaid().getStringAmount(),"error in final payment - amount paid");
 
         String expTotalAfterDiscount = saleBuilder.totalAfterDiscount(discount).getStringAmount();
-        assertEquals(expTotalAfterDiscount,saleTerminator.getFinalSale().getFinalTotalAfterDiscount().getStringAmount(),"error in final salebuilder - amount after discount");
+        assertEquals(expTotalAfterDiscount,saleTerminator.getFinalSale().getFinalTotalAfterDiscount().getStringAmount(),"error in final SaleBuilder - amount after discount");
 
         String expDiscount = discount.getDiscountAmount().getStringAmount();
         assertEquals(expDiscount,saleTerminator.getFinalSale().getFinalDiscount().getDiscountAmount().getStringAmount(),"error in final discount");
