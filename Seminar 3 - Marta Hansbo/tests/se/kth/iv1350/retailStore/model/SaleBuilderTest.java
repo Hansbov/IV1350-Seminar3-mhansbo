@@ -57,7 +57,7 @@ class SaleBuilderTest {
     }
 
     @Test
-    void updateSaleOutput(){
+    void updateSale(){
         // testing output of method updateSale
         GoodsDTO testDTO = new GoodsDTO(1, inventoryManager);
         RecentlyAddedDTO result = testSale.updateSale(testDTO,1);
@@ -67,8 +67,5 @@ class SaleBuilderTest {
         assertEquals(testDTO.getItemPriceInclVAT().getStringAmount(), result.getPrice().getStringAmount(),"wrong price returned");
     }
 
-    @Test
-    void updateSale() {
-    }
-    
+
 }
