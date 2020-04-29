@@ -40,14 +40,26 @@ public class SaleTerminator {
         integratorCreator.getInventoryManager().logInventoryData(finalSale);
     }
 
+    /**
+     *
+     * @return Payment
+     */
     public Payment getPayment() {
         return payment;
     }
 
+    /**
+     *
+     * @return Receipt
+     */
     public Receipt getReceipt() {
         return receipt;
     }
 
+    /**
+     *
+     * @return SaleDTO finalSale
+     */
     public SaleDTO getFinalSale() {
         return finalSale;
     }

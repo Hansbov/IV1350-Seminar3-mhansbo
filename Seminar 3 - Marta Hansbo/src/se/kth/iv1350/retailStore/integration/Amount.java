@@ -81,9 +81,9 @@ public class Amount {
      */
     private String composeStringAmount(int intAmount){
         String intString = String.valueOf(intAmount);
-        int slen = intString.length();
+        int sLen = intString.length();
         if (this.intAmount >= 0) {
-            switch(slen) {
+            switch(sLen) {
                 case 1:
                     stringAmount = "0.0" + intString;
                     break;
@@ -91,12 +91,12 @@ public class Amount {
                     stringAmount = "0." + intString;
                     break;
                 default:
-                    int decimals = slen - 2;
+                    int decimals = sLen - 2;
                     stringAmount = intString.substring(0, decimals) + "." + intString.substring(decimals);
             }
         }
         else {
-            switch (slen) {
+            switch (sLen) {
                 case 2:
                     stringAmount = "-0.0" + intString.substring(1);
                     break;
@@ -104,7 +104,7 @@ public class Amount {
                     stringAmount = "-0." + intString.substring(1);
                     break;
                 default:
-                    int decimals = slen - 2;
+                    int decimals = sLen - 2;
                     stringAmount = intString.substring(0, decimals) + "." + intString.substring(decimals);
             }
         }

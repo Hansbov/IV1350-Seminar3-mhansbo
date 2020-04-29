@@ -26,6 +26,10 @@ public class CashRegister {
          return cashBalance;
     }
 
+    /**
+     *
+     * @return Amount cashBalance
+     */
     public Amount getCashBalance() {
         return cashBalance;
     }

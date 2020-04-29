@@ -54,15 +54,35 @@ public class SaleBuilder {
         Amount discountToSubtract = currentDiscount.getDiscountAmount();
         return this.runningTotal.plus(discountToSubtract);
     }
+
+    /**
+     *
+     * @return Cart currentCart
+     */
     public Cart getCurrentCart() {
         return currentCart;
     }
+
+    /**
+     *
+     * @return Amount runningTotalIncVAT
+     */
     public Amount getRunningTotalInclVAT() {
         return runningTotal;
     }
+
+    /**
+     *
+     * @return Amount runningTotalVAT
+     */
     public Amount getRunningTotalVAT() {
         return runningTotalVAT;
     }
+
+    /**
+     *
+     * @return StoreDTO
+     */
     public StoreDTO getStore() {
         return store;
     }

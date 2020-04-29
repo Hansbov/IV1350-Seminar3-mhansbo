@@ -17,7 +17,6 @@ public class Payment {
      * @param currentDiscount the discount concerning the current sale: Discount
      * @param currentSale the current sale: SaleBuilder.
      */
-
     public Payment(Amount amountPaid, Discount currentDiscount, SaleBuilder currentSale) {
         this.amountPaid = amountPaid;
         Amount toPay = currentSale.totalAfterDiscount(currentDiscount);
@@ -25,12 +24,27 @@ public class Payment {
         this.amountChange = exactAmountChange.roundedToCoins();
         rounding = exactAmountChange.plus(this.amountChange.times(-1));
     }
+
+    /**
+     *
+     * @return Amount rounding
+     */
     public Amount getRounding() {
         return rounding;
     }
+
+    /**
+     *
+     * @return Amount amountChange
+     */
     public Amount getAmountChange() {
         return amountChange;
     }
+
+    /**
+     *
+     * @return Amount amountPaid
+     */
     public Amount getAmountPaid() {
         return amountPaid;
     }

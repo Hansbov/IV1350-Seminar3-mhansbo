@@ -24,6 +24,10 @@ public class SalesLog {
         listOfSales.add(finalSale);
     }
 
+    /**
+     *
+     * @return ArrayList listOfSales
+     */
     public ArrayList<SaleDTO> getListOfSales() {
         return listOfSales;
     }

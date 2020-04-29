@@ -37,6 +37,10 @@ public class Discount {
        }
     }
 
+    /**
+     *
+     * @return Amount discountAmount
+     */
     public Amount getDiscountAmount() {
             return discountAmount;
     }
